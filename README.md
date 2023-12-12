@@ -26,9 +26,12 @@ This is an example of how to list things you need to use the software and how to
      npm install
     ```
 3. Make your own .env file
+
     ```
     ACCESS_TOKEN_SECRET="secret"
     REFRESH_TOKEN_SECRET="secret"
+
+    MONGO_URI="Your mongodb uri here"
     ```
 
 ## Roadmap
