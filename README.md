@@ -38,5 +38,3 @@ This is an example of how to list things you need to use the software and how to
 
 -   [x] Setup express server
 -   [x] Add routes
--   [ ] Setup ejs view engine
--   [ ] Making request to REST API for front-end
