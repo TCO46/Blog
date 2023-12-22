@@ -1,5 +1,5 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+// import * as dotenv from "dotenv";
+// dotenv.config();
 import { NextFunction, Request, Response } from "express";
 import UserModel from "../models/User";
 import bcrypt from "bcryptjs";
