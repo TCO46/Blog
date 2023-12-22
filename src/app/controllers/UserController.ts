@@ -3,9 +3,10 @@ import UserModel from "../models/User";
 import { UserTyping } from "../../typings/User";
 
 class UserController {
-	async getAllUsers(req: Request, res: Response, next: NextFunction) {
+	getAllUsers(req: Request, res: Response, next: NextFunction) {
+		if (!req.user) return res.status(401).send("Unauthorized");
 		// await User.find({}, (err: any, users: UserTyping)
-		await UserModel.find({})
+		UserModel.find({})
 			.select("username fullName _id ")
 			.populate("posts")
 			.then((users) => {
