@@ -13,6 +13,4 @@ router.put("/update/:id", postController.updatePost);
 
 router.delete("/delete/:id", postController.deletePost);
 
-router.post("/comment/:id", postController.newComment);
-
 export default router;

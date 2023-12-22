@@ -2,6 +2,7 @@ import { Express } from "express";
 import userRouter from "./user";
 import authRouter from "./auth";
 import postRouter from "./post";
+import commentRouter from "./comment";
 
 import AuthController from "../app/controllers/AuthController";
 
@@ -13,4 +14,6 @@ export function route(app: Express) {
 	app.use("/api/auth", authRouter);
 
 	app.use("/api/post", postRouter);
+
+	app.use("/api/comment", commentRouter);
 }

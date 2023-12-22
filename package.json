@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "npx tsc",
-		"dev": "concurrently \"npx tsc -w\"  \"nodemon dist/index.js\""
+		"dev": "concurrently \"npx tsc -w\"  \"nodemon --env-file=.env dist/index.js\""
 	},
 	"keywords": [],
 	"author": "",
