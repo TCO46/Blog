@@ -1,4 +1,4 @@
-import { UserTyping } from "../../typings/User";
+import { UserTyping } from "./User";
 
 declare global {
 	namespace Express {

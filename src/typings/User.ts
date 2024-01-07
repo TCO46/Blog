@@ -1,4 +1,5 @@
 export interface UserTyping {
+	id: String;
 	_id: string;
 	username: string;
 	fullName: string;

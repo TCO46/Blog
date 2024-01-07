@@ -1,10 +1,10 @@
 // import * as dotenv from "dotenv";
 // dotenv.config();
-import { NextFunction, Request, Response } from "express";
-import UserModel from "../models/User";
 import bcrypt from "bcryptjs";
+import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import { UserTyping } from "../../typings/User";
+import UserModel from "../models/User";
 
 class AuthController {
 	async login(req: Request, res: Response, next: NextFunction) {
@@ -16,8 +16,14 @@ class AuthController {
 
 		try {
 			if (await bcrypt.compare(req.body.password, User.password)) {
-				const token = jwt.sign({ username: User.username, id: User._id }, String(process.env.ACCESS_TOKEN_SECRET), { expiresIn: "1h" });
-				const refreshToken = jwt.sign({ username: User.username, id: User._id }, String(process.env.REFRESH_TOKEN_SECRET), { expiresIn: "7d" });
+				const token = jwt.sign({ username: User.username, id: User._id }, String(process.env.ACCESS_TOKEN_SECRET), {
+					expiresIn: "1h",
+				});
+				const refreshToken = jwt.sign(
+					{ username: User.username, id: User._id },
+					String(process.env.REFRESH_TOKEN_SECRET),
+					{ expiresIn: "7d" },
+				);
 
 				// User.refreshToken = refreshToken;
 				// await UserModel.updateOne({ _id: User._id }, User);
