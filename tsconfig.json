@@ -1,21 +1,57 @@
+// {
+//   "compilerOptions": {
+//     "module": "commonjs",
+//     "esModuleInterop": true,
+//     "target": "es6",
+//     "noImplicitAny": true,
+//     "moduleResolution": "node",
+//     "sourceMap": true,
+//     "outDir": "./dist",
+//     "baseUrl": ".",
+//     "paths": {
+//       "*": [
+//         "node_modules/*"
+//       ]
+//     },
+//     "strict": true
+//   },
+//   "include": [
+//     "./src/**/*"
+//   ]
+//   // "typeRoots": ["./src/typings/Express.d.ts", "./node_modules/@types"]
+//   // "files": ["./src/typings/Express.d.ts"]
+// }
+
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es6",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*"
-      ]
-    },
-    "strict": true
+  "ts-node": {
+    "files": true
   },
-  "include": [
-    "src/**/*"
-  ]
+  "compilerOptions": {
+    "incremental": false,
+    "target": "esnext",
+    "lib": [
+      "ESNext",
+      "ESNext.Promise",
+      "ESNext.AsyncIterable"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "CommonJS",
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  }
 }
