@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-import postController from "../app/controllers/PostController";
+import postController from "../../app/controllers/PostController";
 
 router.get("/get/:id", postController.getPost);
 

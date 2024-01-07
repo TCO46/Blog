@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
-import UserModel from "../models/User";
-import PostModel from "../models/Post";
 import CommentModel from "../models/Comment";
+import PostModel from "../models/Post";
+import UserModel from "../models/User";
 
 class CommentController {
 	async newComment(req: Request, res: Response, next: NextFunction) {
